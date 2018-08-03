@@ -2,7 +2,7 @@ require 'bundler'
 require './models/model'
 Bundler.require
 
-class MyApp < Sinatra::Base
+class Application < Sinatra::Base
  
   get '/' do
     "Hello, Class!"
@@ -28,7 +28,7 @@ class MyApp < Sinatra::Base
   end
     
   post '/food' do
-	"I would have #{params[:favorite_falvor]} ice cream wih #{params[:favorite_fruit]}. I would also add #{params[:favorite_candy]} and #{params[:favorite_syrup]}."
+	"My name is #{params[:name]}, and I love #{params[:favorite_food]}"
   end
  
 end
